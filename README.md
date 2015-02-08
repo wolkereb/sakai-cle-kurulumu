@@ -1,12 +1,14 @@
-# Sakai Kurulumu
-Sakai CLE kurulumunu gerçekleştirmek için oluşturulmuştur. İşletim sistemi olarak CentOS 7 64bit tercih edilmiştir. Dilerseniz bu kurulumu RedHat ve Fedaora içinde de gerçekletirebilirsiniz.
+# Sakai Nedir?
 
-## Firewall için gerekli ayarlar
+Günümüzde çeşitli organizasyon ve kurumlar tarafından üretilmiş gerek ticari gerekse açık kaynak kodlu farklı öğrenme yönetim sistemleri mevcuttur. Bu ortam, yüksek öğrenime özelleşmiş, dünya üzerinde yaygın kullanıma sahip ve açık kaynak kodlu Sakai CLE ortamıdır.
 
-Üniversitenin firewall'u olduğu için sunucu tarafında firewall yapılandırılmayacaktır. CentOS 7 ile beraber gelen firewall hizmetini ise aşağıdaki komut satırları ile durdurup tekrar başlamaması için ayarlayabilirsiniz.
+Sakai İşbirliği ve Öğrenme Ortamı, ders yönetim sistemlerinin sahip olduğu birçok ortak özelliğin yanında bilgi\belge dağıtımı, ödev aktarma, çevrimiçi ölçme değerlendirme ve not defteri ve canlı sohbet modüllerini içeren açık ve uzaktan eğitimi destekleyen birçok özelliği ile web tabanlı, platform bağımsız bir uygulamadır. Öğrenme faaliyetlerini kolaylaştırmak ve daha sistematik, planlı bir şekilde gerçekleştirmeyi hedeflemektedir. Öğrenme materyali sunma, sunulan öğrenme materyalini paylaşma ve tartışma, dersleri yönetme, ödev alma, sınavlara girme, bu ödev ve sınavlara ilişkin geribildirim sağlama, öğrenme materyallerini düzenleme, öğrenci, öğretmen ve sistem kayıtlarını tutma, raporlar alma gibi işlevleri sağlamaktadır.
 
-```
-iptables -F
-service iptables stop
-chkconfig iptables off
-```
+#### Türkiyede Sakai'yi kullanan bazı üniversiteler;
+
+* [Yaşar Üniversitesi] (http://e.yasar.edu.tr)
+* [Dokuz Eylül Üniversitesi] (http://oys.deu.edu.tr/portal)
+* [Gediz Üniversitesi] (http://oys.gediz.edu.tr/portal)
+* [İstanbul Kültür Üniversitesi] (http://cats.iku.edu.tr/portal)
+* [Sabacı Üniversitesi] (https://sucourse.sabanciuniv.edu/portal)
+* [Anadolu Üniversitesi] (http://sakai.anadolu.edu.tr)
