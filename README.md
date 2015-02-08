@@ -1,4 +1,4 @@
-# sakai-kurulumu
+# Sakai Kurulumu
 Sakai CLE kurulumunu gerçekleştirmek için oluşturulmuştur.
 
 İşletim sistemi: CentOS 7 64bit
@@ -80,7 +80,8 @@ Java(TM) SE Runtime Environment (build 1.7.0_72-b14)
 Java HotSpot(TM) 64-Bit Server VM (build 24.72-b04, mixed mode)
 
 
-Maven Ayarları
+#Maven Ayarları
+
 cd /root/packages
 wget http://ftp.itu.edu.tr/Mirror/Apache/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.tar.gz
 tar xpfz apache-maven-3.2.5-bin.tar.gz
