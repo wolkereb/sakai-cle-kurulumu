@@ -28,9 +28,11 @@ alternatives --set jar /opt/jdk1.7.0_76/bin/jar
 alternatives --set javac /opt/jdk1.7.0_76/bin/javac
 ```
 Sunucu yeniden başladığında Java'nın çevresel değişkenlerini belirlememiz gerekiyor.
-
 ```
 nano /root/.bashrc
+```
+Nano ile .bashrc dosyasını açtıktan sonra aşağıdaki komutları ekleyiniz.
+```
 export JAVA_HOME=/opt/jdk1.7.0_76
 export JRE_HOME=/opt/jdk1.7.0_76/jre
 export PATH=$PATH:/opt/jdk1.7.0_76/bin:/opt/jdk1.7.0_76/jre/bin
