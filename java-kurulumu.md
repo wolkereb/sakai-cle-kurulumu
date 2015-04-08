@@ -1,4 +1,4 @@
-#### Java Kurulumu
+# Java Kurulumu
 Java kurulumunu kaynak koddan yağacağımız için aşağıdaki adımları sırasıyla takip ediniz. Kaynak koddan kurulumu tercih etmemin sebebi kurulum dosyalarına hakim olmaktır.
 ```
 mkdir -p /root/packages  
