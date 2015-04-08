@@ -37,11 +37,10 @@ export JAVA_HOME=/opt/jdk1.7.0_76
 export JRE_HOME=/opt/jdk1.7.0_76/jre
 export PATH=$PATH:/opt/jdk1.7.0_76/bin:/opt/jdk1.7.0_76/jre/bin
 ```
-Aşağıdaki komutla bashrc dosyasını güncelleyiniz.
+Aşağıdaki komutla .bashrc dosyasını güncelleyin.
 ```
 source /root/.bashrc
 ```
-
 Java'nın yüklendiğini ve versiyonu kontrol etmek için aşağıdaki komutu kullanabilirsiniz.
 ```
 java -version
