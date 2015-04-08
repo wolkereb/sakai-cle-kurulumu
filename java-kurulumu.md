@@ -3,13 +3,19 @@ Java kurulumunu kaynak koddan yağacağımız için aşağıdaki adımları sır
 ```
 mkdir -p /root/packages  
 cd /root/packages
-
+```
+Java dosyalarını indirin
+```
 wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/7u76-b13/jdk-7u76-linux-x64.tar.gz"wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/7u76-b13/jdk-7u76-linux-x64.tar.gz"
-
+```
+İndirdiğimiz java doslarını tar komutu ile açıp opt dizini altına taşıyalım.
+```
 tar xpfz jdk-7u76-linux-x64.tar.gz
 mv jdk1.7.0_76/ /opt/
 cd /opt/jdk1.7.0_76/
-
+```
+Java'nın çalışması için gerekli java yollarını belirtelim.
+```
 alternatives --install /usr/bin/java java /opt/jdk1.7.0_76/bin/java 2
 alternatives --config java
 alternatives --install /usr/bin/jar jar /opt/jdk1.7.0_76/bin/jar 2
