@@ -1,5 +1,10 @@
 # Java Kurulumu
 Java kurulumunu kaynak koddan yağacağımız için aşağıdaki adımları sırasıyla takip ediniz. Kaynak koddan kurulumu tercih etmemin sebebi kurulum dosyalarına hakim olmaktır.
+
+Sakai 10.4 java'nın güncel versiyonu oracle JDK 1.7.0_76 uyumlu çalışmaktadır bu yüzden güncel versiyonu tercih ediyoruz.
+Java'nın diğer versiyonları için [tıklayınız](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+
+
 ```
 mkdir -p /root/packages  
 cd /root/packages
