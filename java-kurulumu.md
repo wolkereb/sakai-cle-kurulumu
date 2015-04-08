@@ -44,9 +44,11 @@ Java'nın yüklendiğini ve versiyonu kontrol etmek için aşağıdaki komutu ku
 ```
 java -version
 ```
-Ekran Görüntüsü
+Ekran Çıktısı
 ```
 java version "1.7.0_76"
 Java(TM) SE Runtime Environment (build 1.7.0_76-b13)
 Java HotSpot(TM) 64-Bit Server VM (build 24.76-b04, mixed mode)
 ```
+
+Sunucumuzda artık java kurulmuş durumdadır. Artık bir sonraki aşama olan Apache Maven kurulumuna geçebilirsiniz.
