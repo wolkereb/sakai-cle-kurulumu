@@ -15,4 +15,4 @@ Türkiyede Sakai'yi kullanan üniversiteler;
 * [Sabacı Üniversitesi] (https://sucourse.sabanciuniv.edu/portal)
 * [Anadolu Üniversitesi] (http://sakai.anadolu.edu.tr)
 
-#### Kurulum Öncesi Gerekli Ayarlar
+#### Kurulum Öncesi Gerekli Ayarlamaları Yapalım
