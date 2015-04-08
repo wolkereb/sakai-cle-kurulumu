@@ -19,8 +19,8 @@ cd /opt/jdk1.7.0_76/
 alternatives --install /usr/bin/java java /opt/jdk1.7.0_76/bin/java 2
 alternatives --config java
 ```
-Sunucunuzda tek bir java kurulu iste 1 seçip enter'a tıklayınız. Birden fazla java sürümü varsa bize uygun
-olanı seçiniz.
+Sunucunuzda tek bir java kurulu iste 1 seçip enter'a tıklayınız. Birden fazla java sürümü varsa size uygun
+olanı seçiniz ve aşağıdaki komutları çalıştırınız.
 ```
 alternatives --install /usr/bin/jar jar /opt/jdk1.7.0_76/bin/jar 2
 alternatives --install /usr/bin/javac javac /opt/jdk1.7.0_76/bin/javac 2
