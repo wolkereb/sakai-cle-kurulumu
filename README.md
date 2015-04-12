@@ -19,3 +19,4 @@ Türkiyede Sakai'yi kullanan üniversiteler;
 ###Java Kurulumu
 
 * [Java kurulumu için tıklayınız.] (java-kurulumu.md)
+* [Maven kurulumu için tıklayınız.] (maven-kurulumu.md)
