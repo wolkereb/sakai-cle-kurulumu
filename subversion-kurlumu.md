@@ -1,1 +1,1 @@
-Â#SÄubveron Kurulumu
+#Subversion Kurulumu
