@@ -18,7 +18,7 @@ Türkiyede Sakai'yi kullanan üniversiteler;
 * [Anadolu Üniversitesi] (http://sakai.anadolu.edu.tr)
 
 
-###Java Kurulumu
+###Adım Adım Kurulumu Aşamaları
 
 * [Java kurulumu için tıklayınız.] (java-kurulumu.md)
 * [Maven kurulumu için tıklayınız.] (maven-kurulumu.md)
