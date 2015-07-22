@@ -28,7 +28,7 @@ Aşağıdaki gibi bir çıktı almanız gerekiyor.
 ```
 CentOS Linux release 7.1.1503 (Core)
 ```
-Daha sonra işletim sisteminin kaç bit olduğunu kontrol ediyoruz. 64 bit işletim sistemi olması gerekmektedir.
+Daha sonra işletim sisteminin türünü kontrol ediyoruz. Kurulum için 64 bit işletim sistemi önerilir.
 
 ```
 uname -m
