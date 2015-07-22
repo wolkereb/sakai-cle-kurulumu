@@ -18,19 +18,21 @@ Türkiyede Sakai'yi kullanan üniversiteler;
 
 ###Kurulumu Aşamaları
 
-Kulurum için öncelikle işletim sistemini ve sürümünü kontrol ediyoruz. RHEL tabanlı olup olmadığına bakacağız.
+Kuruluma başlamadan önce CentOs, Fedora veya RHEL tabanlı bir işletim sistemi kurduğunuzu var sayıyoruz. Sakai Java ile geliştirildiği için platform bağımsız çalışmaktadır. Hakim olduğunuz bir sunucu tipini kurup kuruluma başlayabilirsiniz. Bizim CentOs'useçme nedenimiz daha kararlı yapıda olmasıdır.
+
+Terminal ile sunucuya bağlandıktan sonra aşağıda sunucunun işletim sistemini ve sunucuda 32bit mi 64bit işletim sistemi kurulmuş bunu  kontrol edeceğiniz. Ram kullanımını doğru ayarlayabilmek için sunucunun 32bit veya 64bit olduğunu bilmemiz şart.
+
 ```
 cat /etc/redhat-release
 ```
-Aşağıdaki gibi bir çıktı alıyorsanız kuruluma devam edebilirsiniz.
+Kurduğumuz sunucu CentOS 7.x işletim sistemidir.
 ```
 CentOS Linux release 7.1.1503 (Core)
 ```
-Daha sonra işletim sisteminin kaç bit olduğunu kontrol ediyoruz. 64 bit işletim sistemi olması gerekmektedir.
 ```
 uname -m
 ```
-Aşağıdaki gibi bir çıktı almanız gerekiyor.
+64bit işletim sistemi olduğunu görüyoruz.
 ```
 x86_64
 ```
