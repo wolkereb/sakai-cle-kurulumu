@@ -1,4 +1,4 @@
-#Subversion Kurulumu (CentOS, RHEL, yada Fedora)
+##Subversion Kurulumu (CentOS, RHEL, yada Fedora)
 
 Subversion'u Sakai'nin kurulum dosyalarını indirmek için kullanacaktır.
 Şimdi subversion'u kurmak için aşağıdaki ifadeyi komut satırına yapıştırınız.
