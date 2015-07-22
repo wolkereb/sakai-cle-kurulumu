@@ -28,7 +28,7 @@ Aşağıdaki gibi bir çıktı almanız gerekiyor.
 ```
 CentOS Linux release 7.1.1503 (Core)
 ```
-Daha sonra işletim sisteminin türünü kontrol ediyoruz. Kurulum için 64 bit işletim sistemi önerilir.
+Daha sonra işletim sisteminin kaç bit olduğunu kontrol ediyoruz. 64 bit işletim sistemi olması gerekmektedir.
 
 ```
 uname -m
@@ -57,4 +57,14 @@ Tomcat dizinine geçiş yapıp sakai kurulum dosyalarını subversion ile sunucu
 cd /opt/tomcat
 svn co https://source.sakaiproject.org/svn/sakai/tags/sakai-10.5/ sakai
 ```
+Ekran çıktısı aşağıdaki gibi olmalıdır.
 
+```
+A    sakai/web/web-impl/pack/src/webapp/WEB-INF
+A    sakai/web/web-impl/pack/src/webapp/WEB-INF/components.xml
+A    sakai/web/web-impl/pack/pom.xml
+ U   sakai/web
+Checked out external at revision 320234.
+
+Checked out revision 320234.
+```
