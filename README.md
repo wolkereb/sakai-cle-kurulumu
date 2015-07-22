@@ -68,3 +68,23 @@ Checked out external at revision 320234.
 
 Checked out revision 320234.
 ```
+```
+cd sakai/master
+mvn clean install
+```
+Ekran çıktısı aşağıdaki gibi olmalıdır.
+```
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 28.722 s
+[INFO] Finished at: 2015-07-22T14:26:09+03:00
+[INFO] Final Memory: 11M/491M
+[INFO] ------------------------------------------------------------------------
+```
+Sakai ana dizine geçiş yaptıktan sonra tüm projeyi derliyoruz.
+
+```
+cd ..
+mvn clean install sakai:deploy -Dmaven.tomcat.home=/opt/tomcat -Dsakai.home=/opt/tomcat/sakai -Djava.net.preferIPv4Stack=true
+```
