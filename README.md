@@ -47,4 +47,11 @@ yum install nano unzip wget -y
 
 * [Java Kurulumu] (java-kurulumu.md)
 * [Maven Kurulumu] (maven-kurulumu.md)
+* [Tomcat Kurulumu] (tomcat-kurulumu.md)
 * [Subversion Kurulumu] (subversion-kurlumu.md)
+
+```
+cd /opt/tomcat
+svn co https://source.sakaiproject.org/svn/sakai/tags/sakai-10.5/ sakai
+```
+
