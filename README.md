@@ -83,3 +83,15 @@ Ekran çıktısı aşağıdaki gibi olmalıdır.
 cd ..
 mvn clean install sakai:deploy -Dmaven.tomcat.home=/opt/tomcat -Dsakai.home=/opt/tomcat/sakai -Djava.net.preferIPv4Stack=true
 ```
+Ekran çıktısı aşağıdaki gibi olmalıdır.
+```
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 01:01 h
+[INFO] Finished at: 2015-07-22T15:29:02+03:00
+[INFO] Final Memory: 436M/899M
+[INFO] ------------------------------------------------------------------------
+```
+
+
