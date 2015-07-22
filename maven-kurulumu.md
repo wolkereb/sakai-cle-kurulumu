@@ -76,4 +76,4 @@ Maven ayarlarımızı setting.xml dosyasına ekliyoruz.
 </settings>
 ```
 
-Maven kurulumu tamanlandı. Bir sonraki aşama olan Tomcat kurulumuna geçebilirsiniz.
+Maven kurulumu tamanlandı. Bir sonraki aşama olan [Tomcat Kurulumu] (tomcat-kurulumu.md) kurulumuna geçebilirsiniz.
