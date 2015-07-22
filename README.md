@@ -20,11 +20,11 @@ Türkiyede Sakai'yi kullanan üniversiteler;
 
 ###Kurulumu Aşamaları
 
-Kulurum için öncelikle işletim sistemini ve sürümünü kontrol ediyoruz.
+Kulurum için öncelikle işletim sistemini ve sürümünü kontrol ediyoruz. RHEL tabanlı olup olmadığına bakacağız.
 ```
 cat /etc/redhat-release
 ```
-Aşağıdaki gibi bir çıktı almanız gerekiyor.
+Aşağıdaki gibi bir çıktı alıyorsanız kuruluma devam edebilirsiniz.
 ```
 CentOS Linux release 7.1.1503 (Core)
 ```
