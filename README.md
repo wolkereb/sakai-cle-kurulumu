@@ -47,4 +47,4 @@ yum install nano unzip wget -y
 
 * [Java Kurulumu] (java-kurulumu.md)
 * [Maven Kurulumu] (maven-kurulumu.md)
-* [Subversion Kurulumu] (subversion-kurulumu.md)
+* [Subversion Kurulumu] (subversion-kurlumu.md)
