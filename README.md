@@ -1,4 +1,4 @@
-# Sakai Kurulumu?
+# Sakai CLE Kurulumu ve Yapılandırması
 
 ![alt text](https://raw.githubusercontent.com/eemirtekin/sakai-tr/master/sakai-ekran-goruntusu.png "Sakai 10.x Ekran görüntüsü")
 ####Kurulum CentOS 7.x 64bit işletim sistemi üzerinde gerçekleştirilmiştir. RHEL tabanlı işletim sistemlerinde aynı kurulumu kullanabilirsiniz. (Fedora, Redhat)
