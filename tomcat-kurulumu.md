@@ -1,45 +1,48 @@
 # Tomcat Kurulumu
+
+Packages dizinize geçtikten sonra tomcat dosylarını wget ile sunucumuza indiriyoruz.
+
 ```
 cd /root/packages/
 ```
-```
-wget http://ftp.mku.edu.tr/apache-dist/tomcat/tomcat-7/v7.0.63/bin/apache-tomcat-7.0.63.tar.gz
-```
+İndirdiğimiz tomcat dosyasını tar komutu ile açıp daha sonra opt dizininin altına maven ismiyle taşıyoruz.
 ```
 tar xpfz apache-tomcat-7.0.63.tar.gz
 mv apache-tomcat-7.0.63 /opt/tomcat
 ```
+Tomcat kurulumu için çevresel değişkenleri .bashrc dosyasını nano ile açıp içine export ifadelerini ekliyoruz. Bu sayede sunucu her başladığında tomcat için çevresel değişkenler aktif olacaktır.
 ```
 nano /root/.bashrc
 export CATALINA_HOME=/opt/tomcat
 export PATH=$PATH:$CATALINA_HOME/bin
 ```
+Sisteme restart atmak yerine source komutu ile .bashrc dosyasının içeriğini sisteme tanıtmış oluyoruz.
 ```
 source /root/.bashrc
 ```
-
+Her bir tomcat nodu bin dizini içinde setenv.sh dosyası ile farklı özellliklerle çalıştırılabilir.
 ```
 cd /opt/tomcat/bin
 nano setenv.sh
 ```
-
+Bu ayarlar sizin sunucu konfigürasyonuna göre değişiklik gösterecektir. Örneğin burada tomcat için max 1024 mb hafıza ayarlanmıştır, sakai 1024 mb'tan fazla hafıza kullanmak istediğinde out of memory(yetersiz hafıza) uyarısı verecektir. 
 ```
 export JAVA_OPTS='-server -Xms512m -Xmx1024m -XX:PermSize=128m -XX:MaxPermSize=512m -XX:NewSize=192m -XX:MaxNewSize=384m -Djava.awt.headless=true -Dhttp.agent=Sakai -Dorg.apache.jasper.compiler.Parser.STRICT_QUOTE_ESCAPING=false -Dsun.lang.ClassLoader.allowArraySyntax=true'
 ```
-
+Setenv.sh dosyasını çalıştırabilir hale getirip. Tomcat server'ın UTF8 desteğini ekliyoruz.
 ```
 chmod a+x *.sh
 cd ../conf
 nano server.xml
 ```
 
-
+server.xml dosyasının önceli hali
 ```
 <Connector port="8080" protocol="HTTP/1.1"
                connectionTimeout="20000"
                redirectPort="8443" />
 ```
-to
+server.xml dosyasının sonraki hali
 
 ```
 <Connector port="8080" protocol="HTTP/1.1"
@@ -47,25 +50,29 @@ to
                redirectPort="8443" URIEncoding="UTF-8"/>
 ```
 
+Sakai'nin sağlıklı çalışması için tomcat dosyalarında varsayılan olarak yüklenen dosyaları webapps dizininden siliyoruz. Burada dosyalar tomcat'i yönetmek ve özelliklerini göstermek için tomcat ile beraber gelmiştir. 
 ```
 cd ..
 rm -rf webapps/*
 nano conf/catalina.properties
 ```
-```
-common.loader=${catalina.base}/lib,${catalina.base}/lib/*.jar,${catalina.home}/lib,${catalina.home}/lib/*.jar
-```
-to
+Sakai'nin tomcat için birkaç özel ayarı bulunmaktadır. Bunların catalina.properties dosyasında düzenlenmesi gerekir.
+Düzenlenmeniz gereken satırlar aşğıda verilmiştir.
+
+common.loader=${catalina.base}/lib,${catalina.base}/lib/*.jar,${catalina.home}/lib,${catalina.home}/lib/*.jar   satırını aşağıdaki gibi düzenliyoruz.
+
 ```
 common.loader=${catalina.base}/lib,${catalina.base}/lib/*.jar,${catalina.home}/lib,${catalina.home}/lib/*.jar,${catalina.base}/common/classes/,${catalina.base}/common/lib/*.jar
 ```
+shared.loader= burası normalde boş gelmetedir, aşağıdaki satırı ekliyoruz.
 ```
 shared.loader=${catalina.base}/shared/classes/,${catalina.base}/shared/lib/*.jar
 ```
-
+server.loader= burasıda normalde boş gelmetedir, aşağıdaki satırı ekliyoruz.
 ```
 server.loader=${catalina.base}/server/classes/,${catalina.base}/server/lib/*.jar
 ```
+Burda Sakai'nin önerdiği dizin yapısını oluşturuyoruz. Bu dizinlerin oluşturulması zorunlu değildir.
 ```
 mkdir -p shared/classes shared/lib common/classes common/lib server/classes server/lib
 ```
