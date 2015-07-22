@@ -70,4 +70,5 @@ server.loader=${catalina.base}/server/classes/,${catalina.base}/server/lib/*.jar
 mkdir -p shared/classes shared/lib common/classes common/lib server/classes server/lib
 ```
 
+Maven kurulumu tamanlandı. Bir sonraki aşama olan [Subversion Kurulumu] (subversion-kurulumu.md) kurulumuna geçebilirsiniz.
 
