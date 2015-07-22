@@ -1,6 +1,6 @@
 # Sakai Kurulumu?
 
-![alt text](https://raw.githubusercontent.com/eemirtekin/sakai-tr/master/ekran-goruntusu.png "Sakai 10.x Ekran görüntüsü")
+![alt text](https://raw.githubusercontent.com/eemirtekin/sakai-tr/master/sakai-ekran-goruntusu.png "Sakai 10.x Ekran görüntüsü")
 ####Kurulum CentOS 7.x 64bit işletim sistemi üzerinde gerçekleştirilmiştir. RHEL tabanlı işletim sistemlerinde aynı kurulumu kullanabilirsiniz. (Fedora, Redhat)
 
 #####Sakai Hakkında:
