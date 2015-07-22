@@ -93,7 +93,6 @@ Ekran çıktısı aşağıdaki gibi olmalıdır.
 [INFO] Final Memory: 436M/899M
 [INFO] ------------------------------------------------------------------------
 ```
-
 Kurulum tamamlandı şimdi Sakai'yi başladabiliriz.
 ```
 /opt/tomcat/bin/startup.sh 
@@ -113,6 +112,26 @@ CentOS 7.x için firewall'u aşağıdaki gibi kapatabilirsiniz.
 systemctl stop firewalld.service
 systemctl disable firewalld.service
 ```
-
-
-Sakai'nin başlamasını kontrol etmek için /opt/tomcat/logs/catalina.out dosyasını inceleyenilirsiniz.
+Sakai'nin başlayıp, başlamadığını yada başlarken ne gibi hatalar oluştuğunu kontrol etmek için /opt/tomcat/logs/catalina.out dosyasını inceleyenilirsiniz.
+```
+tail -f /opt/tomcat/logs/catalina.out
+```
+Eğer aşağıdaki ifadeyi görüyorsunuz. Sakai'yi iyi kötü başlamış demekdir.
+```
+INFO: Deployment of web application archive /opt/tomcat/webapps/sakai-ws.war has finished in 2,578 ms
+Jul 22, 2015 3:53:51 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+Jul 22, 2015 3:53:51 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+Jul 22, 2015 3:53:51 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 256159 ms
+```
+Herhangi bir internet tarayıcısını açıp sisteme gişi yapabilirsiniz. Tomcat varsayılan olarak 8080 portunu kullanmaktadır. Bu yüzden sakai'de 8080 portundan çalışmaktadır. Şimdi kurduğumuz sakai'ye bir göz atabilirsiniz.
+```
+http://ip-adres:8080/portal 
+```
+Varsayılan yönetici için kullanıcı adı ve şifre aşağıdadır.
+```
+Kullanıcı Adı: admin
+Şifre: admin
+```
