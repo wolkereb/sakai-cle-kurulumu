@@ -9,14 +9,12 @@ Sakai İşbirliği ve Öğrenme Ortamı, ders yönetim sistemlerinin sahip oldu�
 Öğrenme faaliyetlerini kolaylaştırmak ve daha sistematik, planlı bir şekilde gerçekleştirmeyi hedeflemektedir. Öğrenme materyali sunma, sunulan öğrenme materyalini paylaşma ve tartışma, dersleri yönetme, ödev alma, sınavlara girme, bu ödev ve sınavlara ilişkin geribildirim sağlama, öğrenme materyallerini düzenleme, öğrenci, öğretmen ve sistem kayıtlarını tutma, raporlar alma gibi işlevleri sağlamaktadır.
 
 Türkiyede Sakai'yi kullanan üniversiteler;
-
 * [Yaşar Üniversitesi] (http://e.yasar.edu.tr)
 * [Dokuz Eylül Üniversitesi] (http://oys.deu.edu.tr/portal)
 * [Gediz Üniversitesi] (http://oys.gediz.edu.tr/portal)
 * [İstanbul Kültür Üniversitesi] (http://cats.iku.edu.tr/portal)
 * [Sabacı Üniversitesi] (https://sucourse.sabanciuniv.edu/portal)
 * [Anadolu Üniversitesi] (http://sakai.anadolu.edu.tr)
-
 
 ###Kurulumu Aşamaları
 
@@ -29,22 +27,17 @@ Aşağıdaki gibi bir çıktı alıyorsanız kuruluma devam edebilirsiniz.
 CentOS Linux release 7.1.1503 (Core)
 ```
 Daha sonra işletim sisteminin kaç bit olduğunu kontrol ediyoruz. 64 bit işletim sistemi olması gerekmektedir.
-
 ```
 uname -m
 ```
 Aşağıdaki gibi bir çıktı almanız gerekiyor.
-
 ```
 x86_64
 ```
-
 Şimdi kurulum esnasında gerekli olan paketleri kurmalıyız. 
-
 ```
 yum install nano unzip wget -y
 ```
-
 Sırası ile Java, Maven, Tomcat ve Subversion'ı sunucumuza kuruyoruz.
 
 * [Java Kurulumu] (java-kurulumu.md)
@@ -68,6 +61,7 @@ Checked out external at revision 320234.
 
 Checked out revision 320234.
 ```
+Sakai'yi derlemeden önce master dizinine geçiş yapıp master'ı derliyoruz. 
 ```
 cd sakai/master
 mvn clean install
@@ -82,8 +76,7 @@ Ekran çıktısı aşağıdaki gibi olmalıdır.
 [INFO] Final Memory: 11M/491M
 [INFO] ------------------------------------------------------------------------
 ```
-Sakai ana dizine geçiş yaptıktan sonra tüm projeyi derliyoruz.
-
+Şimdi ise Sakai ana dizine geçiş yaptıktan sonra tüm projeyi derliyoruz.
 ```
 cd ..
 mvn clean install sakai:deploy -Dmaven.tomcat.home=/opt/tomcat -Dsakai.home=/opt/tomcat/sakai -Djava.net.preferIPv4Stack=true
