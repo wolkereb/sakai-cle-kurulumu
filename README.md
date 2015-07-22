@@ -45,11 +45,14 @@ x86_64
 yum install nano unzip wget -y
 ```
 
+Sırası ile Java, Maven, Tomcat ve Subversion'ı sunucumuza kuruyoruz.
+
 * [Java Kurulumu] (java-kurulumu.md)
 * [Maven Kurulumu] (maven-kurulumu.md)
 * [Tomcat Kurulumu] (tomcat-kurulumu.md)
 * [Subversion Kurulumu] (subversion-kurlumu.md)
 
+Tomcat dizinine geçiş yapıp sakai kurulum dosyalarını subversion ile sunucumuza indiriyoruz. İndirme işlemi bağlantı hızına göre uzun sürebilirmektedir.
 ```
 cd /opt/tomcat
 svn co https://source.sakaiproject.org/svn/sakai/tags/sakai-10.5/ sakai
