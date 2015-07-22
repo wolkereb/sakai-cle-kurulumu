@@ -1,4 +1,4 @@
-# Maven Kurulumu
+# Maven Kurulumu (CentOS, RHEL, yada Fedora)
 
 Maven Apache lisansı ile open source olarak proje yönetim aracı olarak kullanılmaktadır.
 
