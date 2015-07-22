@@ -94,4 +94,25 @@ Ekran çıktısı aşağıdaki gibi olmalıdır.
 [INFO] ------------------------------------------------------------------------
 ```
 
+Kurulum tamamlandı şimdi Sakai'yi başladabiliriz.
+```
+/opt/tomcat/bin/startup.sh 
+```
+Komut satırına üstteki ifadeyi yazdığınızda aşağaki gibi çıktı almanız gerekmektedir.
+```
+Using CATALINA_BASE:   /opt/tomcat
+Using CATALINA_HOME:   /opt/tomcat
+Using CATALINA_TMPDIR: /opt/tomcat/temp
+Using JRE_HOME:        /opt/jdk1.7.0_76/jre
+Using CLASSPATH:       /opt/tomcat/bin/bootstrap.jar:/opt/tomcat/bin/tomcat-juli.jar
+Tomcat started.
+```
+Sakai'yi kurdunuz fakar sayfa gelmiyor ise muhtemelen firewall!a takılıyor olabilirsiniz.
+CentOS 7.x için firewall'u aşağıdaki gibi kapatabilirsiniz.
+```
+systemctl stop firewalld.service
+systemctl disable firewalld.service
+```
 
+
+Sakai'nin başlamasını kontrol etmek için /opt/tomcat/logs/catalina.out dosyasını inceleyenilirsiniz.
