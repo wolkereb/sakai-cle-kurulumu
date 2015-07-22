@@ -20,5 +20,30 @@ Türkiyede Sakai'yi kullanan üniversiteler;
 
 ###Kurulumu Aşamaları
 
+Kulurum için öncelikle işletim sistemini ve sürümünü kontrol ediyoruz.
+```
+cat /etc/redhat-release
+```
+Aşağıdaki gibi bir çıktı almanız gerekiyor.
+```
+CentOS Linux release 7.1.1503 (Core)
+```
+Daha sonra işletim sisteminin kaç bit olduğunu kontrol ediyoruz. 64 bit işletim sistemi olması gerekmektedir.
+
+```
+uname -m
+```
+Aşağıdaki gibi bir çıktı almanız gerekiyor.
+
+```
+x86_64
+```
+
+Şimdi kurulum esnasında gerekli olan paketleri kurmalıyız. 
+
+```
+yum install nano unzip wget -y
+```
+
 * [Java Kurulumu] (java-kurulumu.md)
 * [Maven Kurulumu] (maven-kurulumu.md)
