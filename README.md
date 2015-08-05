@@ -136,5 +136,3 @@ Varsayılan yönetici için kullanıcı adı ve şifre aşağıdadır.
 Kullanıcı Adı: admin
 Şifre: admin
 ```
-
-İyi bir [ingilizce kursu] (http://wimbledonacademy.com.tr) arıyorum.
