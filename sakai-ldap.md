@@ -66,7 +66,7 @@ Ldap kullanıcı adınızı giriniz.
     <value>eemirtekin</value>
 </property>
 ```
-Ldap şifrenizi girişiniz.
+Ldap şifrenizi giriniz.
 ```
 <property name="ldapPassword">
     <value>şifre</value>

@@ -37,7 +37,7 @@ uname -m
 ```
 x86_64
 ```
-Şimdi kurulum esnasında gerekli olan paketleri kurmalıyız. 
+Şimdi kurulum esnasında gerekli olan paketleri kurmalıyız.
 ```
 yum install nano unzip wget -y
 ```
@@ -64,7 +64,7 @@ Checked out external at revision 320234.
 
 Checked out revision 320234.
 ```
-Sakai'yi derlemeden önce master dizinine geçiş yapıp master'ı derliyoruz. 
+Sakai'yi derlemeden önce master dizinine geçiş yapıp master'ı derliyoruz.
 ```
 cd sakai/master
 mvn clean install
@@ -96,7 +96,7 @@ Ekran çıktısı aşağıdaki gibi olmalıdır.
 ```
 Kurulum tamamlandı şimdi Sakai'yi başladabiliriz.
 ```
-/opt/tomcat/bin/startup.sh 
+/opt/tomcat/bin/startup.sh
 ```
 Komut satırına üstteki ifadeyi yazdığınızda aşağaki gibi çıktı almanız gerekmektedir.
 ```
@@ -129,10 +129,13 @@ INFO: Server startup in 256159 ms
 ```
 Herhangi bir internet tarayıcısını açıp sisteme gişi yapabilirsiniz. Tomcat varsayılan olarak 8080 portunu kullanmaktadır. Bu yüzden sakai'de 8080 portundan çalışmaktadır. Şimdi kurduğumuz sakai'ye bir göz atabilirsiniz.
 ```
-http://ip-adres:8080/portal 
+http://ip-adres:8080/portal
 ```
 Varsayılan yönetici için kullanıcı adı ve şifre aşağıdadır.
 ```
 Kullanıcı Adı: admin
 Şifre: admin
 ```
+
+## Sakai Ldap Ayarları
+* [Sakai Ldap Ayarları] (sakai-ldap.md) için tıklayınız.
