@@ -1,12 +1,15 @@
-Sakai'yi üniversitenizde kullanacaksanız mutlaka Ldap, Cas veya Kerberos gibi Sakai'nin desteklediği bir yapıyı kullanmalısınız. Binlerce öğrenci olduğundan hesapları manuel açamazsınız.
-Sizlere Sakai için ldap yapılandırması nasıl yapılır anlatmak istiyorum.
+#Sakai Ldap Ayarları
 
-Öncelikle sakai dizinine gidiyoruz. Bu dizinde duzenlememiz gereken bazı dosyalar. Aşağıdaki işlemleri sırası ile uygulayın.
+Sakai'yi üniversitede kullanacaksanız mutlaka Ldap, Cas veya Kerberos gibi Sakai'nin desteklediği bir yapıyı kullanmalısınız. Binlerce öğrenci olduğundan hesapları manuel açamanız yorucu ve mantıklı olmayacaktır.
+Sakai için ldap yapılandırması nasıl yapılır?
+
+Öncelikle sakai dizinine gidiyoruz. Bu dizinde düzenlememiz gereken bazı dosyalar. Aşağıdaki işlemleri sırası ile uygulayın.
+
 ```
 cd /opt/tomcat/sakai/
 nano providers/component/pom.xml
 ```
-Bu dosyadaki Jldap kısımız aktif ediyoruz.
+Bu dosyadaki Jldap bölümünü aktif ediyoruz.
 ```
 <!-- Needed for the JLDAP Provider
                 <dependency>
@@ -22,7 +25,9 @@ Aşağıdaki gibi olması gerekiyor.
                           <groupId>org.sakaiproject</groupId>
                           <artifactId>sakai-jldap-provider</artifactId>
                 </dependency>
-```                              
+```
+
+Şimdi Jldap bileşenini aktif edelim.
 ```           
 nano providers/component/src/webapp/WEB-INF/components.xml
 ```
@@ -38,7 +43,7 @@ Aşağıdaki gibi olması gerekiyor.
         <import resource="jldap-beans.xml" />
 
 ```
-Buraya kadar jldap bileşenini aktif ettiş olduk. Şimdi ldap bilgilerini gireceğimiz kısıma geldik.
+Buraya kadar jldap bileşenini aktif ettiş olduk. Şimdi ldap bilgilerini gireceğimiz bölüme geldik.
 
 ```
 nano providers/component/src/webapp/WEB-INF/jldap-beans.xml
@@ -46,25 +51,25 @@ nano providers/component/src/webapp/WEB-INF/jldap-beans.xml
 Ldap sunucusunun hostname i yada ip adresini girebilirsiniz.
 ```
 <property name="ldapHost">
-    <value>ldap.emirtekin.com</value>
+    <value>ldap.yasar.edu.trm</value>
 </property>
 ```
-Bilgi işlemden alacağınız, öğrencileri sorgulayacağınız ldap parametreleri.
+Ldap kullanıcılarını sorgulayacağınız bilgileri girmelisiniz. Bu bilgileri bilgi işlemden alabilirsiniz.
 ```
 <property name="basePath">
-    <value>ou=users,ou=university,dc=something,dc=somethingelse</value>
+    <value>OU=Genel,dc=emirtekin,dc=local</value>
 </property>
 ```
-Ldap kullanıcı adınız
+Ldap kullanıcı adınızı giriniz.
 ```
 <property name="ldapUser">
-    <value>cn=username,ou=staff,ou=users,ou=university,dc=something,dc=somethingelse</value>
+    <value>eemirtekin</value>
 </property>
 ```
-Ldap şifreniz.
+Ldap şifrenizi girişiniz.
 ```
 <property name="ldapPassword">
-    <value>somepassword</value>
+    <value>şifre</value>
 </property>
 ```
 ```
@@ -72,7 +77,7 @@ Ldap şifreniz.
        <value>true</value>
 </property>
 ```
-Alt OU larda arama yapmak istiyorsanız. searchScope u 2 yapmanız gerekmektedir.
+Alt Organization Unit (OU) larda arama yapmak istiyorsanız. searchScope u 2 yapmanız gerekmektedir.
 ```
 <property name="searchScope">
   <value>2</value>
