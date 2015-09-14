@@ -138,4 +138,4 @@ Kullanıcı Adı: admin
 ```
 
 ## Sakai Ldap Ayarları
-* [Sakai Ldap Ayarları] (sakai-ldap.md) için tıklayınız.
+* Sakai Ldap ayarları için [tıklanıyız] (sakai-ldap.md).
