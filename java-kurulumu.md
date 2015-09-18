@@ -39,8 +39,8 @@ nano /root/.bashrc
 ```
 Nano ile .bashrc dosyasını açtıktan sonra aşağıdaki komutları ekleyiniz.
 ```
-export JAVA_HOME=/opt/jdk1.7.0_79ls
-export JRE_HOME=/opt/jdk1.7.0_79lsls/jre
+export JAVA_HOME=/opt/jdk1.7.0_79
+export JRE_HOME=/opt/jdk1.7.0_79/jre
 export PATH=$PATH:/opt/jdk1.7.0_79/bin:/opt/jdk1.7.0_79/jre/bin
 ```
 Aşağıdaki komutla .bashrc dosyasını güncelleyin.
