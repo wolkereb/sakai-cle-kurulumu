@@ -58,4 +58,4 @@ Java(TM) SE Runtime Environment (build 1.7.0_79-b13)
 Java HotSpot(TM) 64-Bit Server VM (build 24.79-b04, mixed mode)
 ```
 
-Sunucumuzda java kurulmuş durumdadır. Bir sonraki aşama olan [Maven Kurulumu] (maven-kurulumu.md) kurulumuna geçebilirsiniz.
+Sunucumuzda java kurulmuş durumdadır. Bir sonraki aşama olan [Maven Kurulumu] (sakai-maven-kurulumu.md) kurulumuna geçebilirsiniz.

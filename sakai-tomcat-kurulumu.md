@@ -7,8 +7,12 @@ cd /root/packages/
 ```
 İndirdiğimiz tomcat dosyasını tar komutu ile açıp daha sonra opt dizininin altına maven ismiyle taşıyoruz.
 ```
-tar xpfz apache-tomcat-7.0.63.tar.gz
-mv apache-tomcat-7.0.63 /opt/tomcat
+wget http://archive.apache.org/dist/tomcat/tomcat-7/v7.0.65/bin/apache-tomcat-7.0.65.tar.gz
+tar xpfz apache-tomcat-7.0.65.tar.gz
+mv apache-tomcat-7.0.65 /opt
+cd /opt
+mkdir tomcat
+ln -s apache-tomcat-7.0.65/ tomcat
 ```
 Tomcat kurulumu için çevresel değişkenleri .bashrc dosyasını nano ile açıp içine export ifadelerini ekliyoruz. Bu sayede sunucu her başladığında tomcat için çevresel değişkenler aktif olacaktır.
 ```
@@ -25,7 +29,7 @@ Her bir tomcat nodu bin dizini içinde setenv.sh dosyası ile farklı özelllikl
 cd /opt/tomcat/bin
 nano setenv.sh
 ```
-Bu ayarlar sizin sunucu konfigürasyonuna göre değişiklik gösterecektir. Örneğin burada tomcat için max 1024 mb hafıza ayarlanmıştır, sakai 1024 mb'tan fazla hafıza kullanmak istediğinde out of memory(yetersiz hafıza) uyarısı verecektir. 
+Bu ayarlar sizin sunucu konfigürasyonuna göre değişiklik gösterecektir. Örneğin burada tomcat için max 1024 mb hafıza ayarlanmıştır, sakai 1024 mb'tan fazla hafıza kullanmak istediğinde out of memory(yetersiz hafıza) uyarısı verecektir.
 ```
 export JAVA_OPTS="-server -Xmx1028m -XX:MaxPermSize=320m -Dorg.apache.jasper.compiler.Parser.STRICT_QUOTE_ESCAPING=false -Djava.awt.headless=true -Dcom.sun.management.jmxremote -Dsun.lang.ClassLoader.allowArraySyntax=true"
 ```
@@ -50,7 +54,7 @@ server.xml dosyasının sonraki hali
                redirectPort="8443" URIEncoding="UTF-8"/>
 ```
 
-Sakai'nin sağlıklı çalışması için tomcat dosyalarında varsayılan olarak yüklenen dosyaları webapps dizininden siliyoruz. Burada dosyalar tomcat'i yönetmek ve özelliklerini göstermek için tomcat ile beraber gelmiştir. 
+Sakai'nin sağlıklı çalışması için tomcat dosyalarında varsayılan olarak yüklenen dosyaları webapps dizininden siliyoruz. Burada dosyalar tomcat'i yönetmek ve özelliklerini göstermek için tomcat ile beraber gelmiştir.
 ```
 cd ..
 rm -rf webapps/*
@@ -64,11 +68,11 @@ common.loader=${catalina.base}/lib,${catalina.base}/lib/*.jar,${catalina.home}/l
 ```
 common.loader=${catalina.base}/lib,${catalina.base}/lib/*.jar,${catalina.home}/lib,${catalina.home}/lib/*.jar,${catalina.base}/common/classes/,${catalina.base}/common/lib/*.jar
 ```
-shared.loader= burası normalde boş gelmetedir, aşağıdaki satırı ekliyoruz.
+shared.loader= burası normalde boş gelmektedir, aşağıdaki satırı ekliyoruz.
 ```
 shared.loader=${catalina.base}/shared/classes/,${catalina.base}/shared/lib/*.jar
 ```
-server.loader= burasıda normalde boş gelmetedir, aşağıdaki satırı ekliyoruz.
+server.loader= burasıda normalde boş gelmektedir, aşağıdaki satırı ekliyoruz.
 ```
 server.loader=${catalina.base}/server/classes/,${catalina.base}/server/lib/*.jar
 ```
@@ -77,5 +81,4 @@ Burda Sakai'nin önerdiği dizin yapısını oluşturuyoruz. Bu dizinlerin oluş
 mkdir -p shared/classes shared/lib common/classes common/lib server/classes server/lib
 ```
 
-Maven kurulumu tamanlandı. Bir sonraki aşama olan [Subversion Kurulumu] (subversion-kurulumu.md) kurulumuna geçebilirsiniz.
-
+Maven kurulumu tamanlandı. Bir sonraki aşama olan [Subversion Kurulumu] (sakai-subversion-kurulumu.md) kurulumuna geçebilirsiniz.

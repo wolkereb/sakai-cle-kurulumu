@@ -7,12 +7,12 @@ Packages dizinize geçtikten sonra maven dosylarını wget ile sunucumuza indiri
 cd /root/packages
 ```
 ```
-wget http://ftp.itu.edu.tr/Mirror/Apache/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.tar.gz
+wget http://mirror.idealhosting.net.tr/Apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
 ```
 İndirdiğimiz maven dosyasını tar komutu ile açıp daha sonra opt dizininin altına maven ismiyle taşıyoruz.
 ```
-tar xpfz apache-maven-3.2.5-bin.tar.gz
-mv apache-maven-3.2.5 /opt/maven
+tar xpfz apache-maven-3.3.9-bin.tar.gz
+mv apache-maven-3.3.9 /opt/maven
 ```
 Maven kurulumu için çevresel değişkenleri .bashrc dosyasını nano ile açıp içine export ifadelerini ekliyoruz. Bu sayede sunucu her başladığında maven çalışması için maven in bulunduğu dizin ve maven için memory ayarları tanımlanmış olacaktır.
 
@@ -76,4 +76,4 @@ Maven ayarlarımızı setting.xml dosyasına ekliyoruz.
 </settings>
 ```
 
-Maven kurulumu tamanlandı. Bir sonraki aşama olan [Tomcat Kurulumu] (tomcat-kurulumu.md) kurulumuna geçebilirsiniz.
+Maven kurulumu tamanlandı. Bir sonraki aşama olan [Tomcat Kurulumu] (sakai-tomcat-kurulumu.md) kurulumuna geçebilirsiniz.

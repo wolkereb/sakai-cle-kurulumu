@@ -1,4 +1,4 @@
-# Sakai CLE Kurulumu ve Yapılandırması
+# Sakai 10.6 CLE Kurulumu ve Yapılandırması
 
 ![alt text](https://raw.githubusercontent.com/eemirtekin/sakai-tr/master/sakai-ekran-goruntusu.png "Sakai 10.x Ekran görüntüsü")
 ####Kurulum CentOS 7.x 64bit işletim sistemi üzerinde gerçekleştirilmiştir. RHEL tabanlı işletim sistemlerinde aynı kurulumu kullanabilirsiniz. (Fedora, Redhat)
@@ -43,15 +43,15 @@ yum install nano unzip wget -y
 ```
 Sırası ile Java, Maven, Tomcat ve Subversion'ı sunucumuza kuruyoruz.
 
-* [Java Kurulumu] (java-kurulumu.md)
-* [Maven Kurulumu] (maven-kurulumu.md)
-* [Tomcat Kurulumu] (tomcat-kurulumu.md)
-* [Subversion Kurulumu] (subversion-kurlumu.md)
+* [Java Kurulumu] (sakai-java-kurulumu.md)
+* [Maven Kurulumu] (sakai-maven-kurulumu.md)
+* [Tomcat Kurulumu] (sakai-tomcat-kurulumu.md)
+* [Subversion Kurulumu] (sakai-subversion-kurlumu.md)
 
 Tomcat dizinine geçiş yapıp sakai kurulum dosyalarını subversion ile sunucumuza indiriyoruz. İndirme işlemi bağlantı hızına göre uzun sürebilirmektedir.
 ```
 cd /opt/tomcat
-svn co https://source.sakaiproject.org/svn/sakai/tags/sakai-10.5/ sakai
+svn co https://source.sakaiproject.org/svn/sakai/tags/sakai-10.6/ sakai
 ```
 Ekran çıktısı aşağıdaki gibi olmalıdır.
 
@@ -66,7 +66,7 @@ Checked out revision 320234.
 ```
 Sakai'yi derlemeden önce master dizinine geçiş yapıp master'ı derliyoruz.
 ```
-cd sakai/master
+cd /opt/tomcat/sakai/master
 mvn clean install
 ```
 Ekran çıktısı aşağıdaki gibi olmalıdır.
@@ -82,7 +82,7 @@ Ekran çıktısı aşağıdaki gibi olmalıdır.
 Şimdi ise Sakai ana dizine geçiş yaptıktan sonra tüm projeyi derliyoruz.
 ```
 cd ..
-mvn clean install sakai:deploy -Dmaven.tomcat.home=/opt/tomcat -Dsakai.home=/opt/tomcat/sakai -Djava.net.preferIPv4Stack=true
+mvn clean install sakai:deploy -Dmaven.tomcat.home=/opt/tomcat -Dsakai.home=/opt/tomcat/sakai -Djava.net.preferIPv4Stack=true -Dmaven.test.skip=true sakai:deploy
 ```
 Ekran çıktısı aşağıdaki gibi olmalıdır.
 ```
@@ -138,4 +138,7 @@ Kullanıcı Adı: admin
 ```
 
 ## Sakai Ldap Ayarları
-* Sakai Ldap ayarları için [tıklanıyız] (sakai-ldap.md).
+* Sakai Ldap ayarları için [tıklanıyız] (sakai-ldap-ayarlari.md).
+
+## Sakai Mysql Ayarları
+* Sakai Ldap ayarları için [tıklanıyız] (sakai-mysql-kurulumu.md).
