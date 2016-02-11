@@ -140,5 +140,5 @@ Kullanıcı Adı: admin
 ## Sakai Ldap Ayarları
 * Sakai Ldap ayarları için [tıklanıyız] (sakai-ldap-ayarlari.md).
 
-## Sakai Mysql Ayarları
-* Sakai Ldap ayarları için [tıklanıyız] (sakai-mysql-kurulumu.md).
+## Sakai MySql Ayarları
+* Sakai'de MySql kurulumu ve ayarları için [tıklanıyız] (sakai-mysql-kurulumu.md).
