@@ -12,7 +12,8 @@ wget http://mirror.idealhosting.net.tr/Apache/maven/maven-3/3.3.9/binaries/apach
 İndirdiğimiz maven dosyasını tar komutu ile açıp daha sonra opt dizininin altına maven ismiyle taşıyoruz.
 ```
 tar xpfz apache-maven-3.3.9-bin.tar.gz
-mv apache-maven-3.3.9 /opt/maven
+mv apache-maven-3.3.9 /opt
+ln -s apache-maven-3.3.9 tomcat
 ```
 Maven kurulumu için çevresel değişkenleri .bashrc dosyasını nano ile açıp içine export ifadelerini ekliyoruz. Bu sayede sunucu her başladığında maven çalışması için maven in bulunduğu dizin ve maven için memory ayarları tanımlanmış olacaktır.
 

@@ -11,7 +11,6 @@ wget http://archive.apache.org/dist/tomcat/tomcat-7/v7.0.65/bin/apache-tomcat-7.
 tar xpfz apache-tomcat-7.0.65.tar.gz
 mv apache-tomcat-7.0.65 /opt
 cd /opt
-mkdir tomcat
 ln -s apache-tomcat-7.0.65/ tomcat
 ```
 Tomcat kurulumu için çevresel değişkenleri .bashrc dosyasını nano ile açıp içine export ifadelerini ekliyoruz. Bu sayede sunucu her başladığında tomcat için çevresel değişkenler aktif olacaktır.
