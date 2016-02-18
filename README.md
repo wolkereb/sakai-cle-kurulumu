@@ -82,7 +82,7 @@ Ekran çıktısı aşağıdaki gibi olmalıdır.
 Şimdi ise Sakai ana dizine geçiş yaptıktan sonra tüm projeyi derliyoruz.
 ```
 cd ..
-mvn clean install sakai:deploy -Dmaven.tomcat.home=/opt/tomcat -Dsakai.home=/opt/tomcat/sakai -Djava.net.preferIPv4Stack=true -Dmaven.test.skip=true sakai:deploy
+mvn clean install sakai:deploy -Dmaven.tomcat.home=/opt/tomcat -Dsakai.home=/opt/tomcat/sakai -Djava.net.preferIPv4Stack=true -Dmaven.test.skip=true
 ```
 Ekran çıktısı aşağıdaki gibi olmalıdır.
 ```

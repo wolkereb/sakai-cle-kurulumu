@@ -13,7 +13,8 @@ wget http://mirror.idealhosting.net.tr/Apache/maven/maven-3/3.3.9/binaries/apach
 ```
 tar xpfz apache-maven-3.3.9-bin.tar.gz
 mv apache-maven-3.3.9 /opt
-ln -s apache-maven-3.3.9 tomcat
+cd /opt
+ln -s apache-maven-3.3.9/ tomcat
 ```
 Maven kurulumu için çevresel değişkenleri .bashrc dosyasını nano ile açıp içine export ifadelerini ekliyoruz. Bu sayede sunucu her başladığında maven çalışması için maven in bulunduğu dizin ve maven için memory ayarları tanımlanmış olacaktır.
 
@@ -34,12 +35,12 @@ mvn --version
 ```
 Maven ekran çıktısı aşağıdaki gibi olmalıdır.
 ```
-Apache Maven 3.2.5 (12a6b3acb947671f09b81f49094c53f426d8cea1; 2014-12-14T19:29:23+02:00)
+Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T16:41:47+00:00)
 Maven home: /opt/maven
-Java version: 1.7.0_76, vendor: Oracle Corporation
-Java home: /opt/jdk1.7.0_76/jre
+Java version: 1.7.0_79, vendor: Oracle Corporation
+Java home: /opt/jdk1.7.0_79/jre
 Default locale: en_US, platform encoding: UTF-8
-OS name: "linux", version: "3.10.0-123.el7.x86_64", arch: "amd64", family: "unix"
+OS name: "linux", version: "3.10.0-327.4.5.el7.x86_64", arch: "amd64", family: "unix"
 ```
 
 Maven ayarları setting.xml dosyasının içinde bulunmaktadır. Projede kullanılacak repository dosyalarının nerede tutulacağına bu dosyada tanımlarız ve projede kullanılacak plugin respository vs bu dizine indirilecektir.

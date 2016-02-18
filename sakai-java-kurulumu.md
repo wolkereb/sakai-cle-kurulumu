@@ -54,8 +54,8 @@ java -version
 Alacağınız ekran çıktısı aşağıdaki gibi olabilir.
 ```
 java version "1.7.0_79"
-Java(TM) SE Runtime Environment (build 1.7.0_79-b13)
-Java HotSpot(TM) 64-Bit Server VM (build 24.79-b04, mixed mode)
+Java(TM) SE Runtime Environment (build 1.7.0_79-b15)
+Java HotSpot(TM) 64-Bit Server VM (build 24.79-b02, mixed mode)
 ```
 
 Sunucumuzda java kurulmuş durumdadır. Bir sonraki aşama olan [Maven Kurulumu] (sakai-maven-kurulumu.md) kurulumuna geçebilirsiniz.
