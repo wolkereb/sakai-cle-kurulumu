@@ -102,7 +102,7 @@ Buradaki eşleştirme kısmınıda bilgi işleme sormalısınız. Onlardan gelec
 Tüm ayarları tamamladık provider bileşenini tekrar derlemeliyiz.
 ```
 cd /opt/tomcat/sakai/providers
-mvn clean install sakai:deploy -Dmaven.tomcat.home=/opt/tomcat -Dsakai.home=/opt/tomcat/sakai -Djava.net.preferIPv4Stack=true
+mvn clean install sakai:deploy -Dmaven.tomcat.home=/opt/tomcat -Dsakai.home=/opt/tomcat/sakai -Djava.net.preferIPv4Stack=true -Dmaven.test.skip=true
 
 ```
 

@@ -1,4 +1,4 @@
-# Maven Kurulumu (CentOS, RHEL, yada Fedora)
+## Maven Kurulumu (CentOS, RHEL, yada Fedora)
 
 Maven Apache lisansı ile open source olarak proje yönetim aracı olarak kullanılmaktadır.
 
@@ -7,14 +7,14 @@ Packages dizinize geçtikten sonra maven dosylarını wget ile sunucumuza indiri
 cd /root/packages
 ```
 ```
-wget http://mirror.idealhosting.net.tr/Apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
+wget https://archive.apache.org/dist/maven/maven-3/3.2.3/binaries/apache-maven-3.2.3-bin.tar.gz
 ```
 İndirdiğimiz maven dosyasını tar komutu ile açıp daha sonra opt dizininin altına maven ismiyle taşıyoruz.
 ```
-tar xpfz apache-maven-3.3.9-bin.tar.gz
-mv apache-maven-3.3.9 /opt
+tar xpfz apache-maven-3.2.3-bin.tar.gz
+mv apache-maven-3.2.3 /opt
 cd /opt
-ln -s apache-maven-3.3.9/ tomcat
+ln -s apache-maven-3.2.3/ maven
 ```
 Maven kurulumu için çevresel değişkenleri .bashrc dosyasını nano ile açıp içine export ifadelerini ekliyoruz. Bu sayede sunucu her başladığında maven çalışması için maven in bulunduğu dizin ve maven için memory ayarları tanımlanmış olacaktır.
 
@@ -35,10 +35,10 @@ mvn --version
 ```
 Maven ekran çıktısı aşağıdaki gibi olmalıdır.
 ```
-Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T16:41:47+00:00)
+Apache Maven 3.2.3 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T16:41:47+00:00)
 Maven home: /opt/maven
-Java version: 1.7.0_79, vendor: Oracle Corporation
-Java home: /opt/jdk1.7.0_79/jre
+Java version: 1.7.0_80, vendor: Oracle Corporation
+Java home: /opt/jdk1.7.0_80/jre
 Default locale: en_US, platform encoding: UTF-8
 OS name: "linux", version: "3.10.0-327.4.5.el7.x86_64", arch: "amd64", family: "unix"
 ```
