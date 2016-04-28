@@ -7,11 +7,11 @@ cd /root/packages/
 ```
 İndirdiğimiz tomcat dosyasını tar komutu ile açıp daha sonra opt dizininin altına maven ismiyle taşıyoruz.
 ```
-wget http://archive.apache.org/dist/tomcat/tomcat-7/v7.0.65/bin/apache-tomcat-7.0.65.tar.gz
-tar xpfz apache-tomcat-7.0.65.tar.gz
-mv apache-tomcat-7.0.65 /opt
+wget http://archive.apache.org/dist/tomcat/tomcat-7/v7.0.69/bin/apache-tomcat-7.0.69.tar.gz
+tar xpfz apache-tomcat-7.0.69.tar.gz
+mv apache-tomcat-7.0.69 /opt/
 cd /opt
-ln -s apache-tomcat-7.0.65/ tomcat
+ln -s apache-tomcat-7.0.69/ tomcat
 ```
 Tomcat kurulumu için çevresel değişkenleri .bashrc dosyasını nano ile açıp içine export ifadelerini ekliyoruz. Bu sayede sunucu her başladığında tomcat için çevresel değişkenler aktif olacaktır.
 ```
@@ -67,14 +67,17 @@ common.loader=${catalina.base}/lib,${catalina.base}/lib/*.jar,${catalina.home}/l
 ```
 common.loader=${catalina.base}/lib,${catalina.base}/lib/*.jar,${catalina.home}/lib,${catalina.home}/lib/*.jar,${catalina.base}/common/classes/,${catalina.base}/common/lib/*.jar
 ```
-shared.loader= burası normalde boş gelmektedir, aşağıdaki satırı ekliyoruz.
-```
-shared.loader=${catalina.base}/shared/classes/,${catalina.base}/shared/lib/*.jar
-```
+
 server.loader= burasıda normalde boş gelmektedir, aşağıdaki satırı ekliyoruz.
 ```
 server.loader=${catalina.base}/server/classes/,${catalina.base}/server/lib/*.jar
 ```
+
+shared.loader= burası normalde boş gelmektedir, aşağıdaki satırı ekliyoruz.
+```
+shared.loader=${catalina.base}/shared/classes/,${catalina.base}/shared/lib/*.jar
+```
+
 Burda Sakai'nin önerdiği dizin yapısını oluşturuyoruz. Bu dizinlerin oluşturulması zorunlu değildir.
 ```
 mkdir -p shared/classes shared/lib common/classes common/lib server/classes server/lib

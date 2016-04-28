@@ -1,4 +1,4 @@
-# Sakai 10.6 CLE Kurulumu ve Yapılandırması
+# Sakai 10.7 CLE Kurulumu ve Yapılandırması
 
 ![alt text](https://raw.githubusercontent.com/eemirtekin/sakai-tr/master/sakai-ekran-goruntusu.png "Sakai 10.x Ekran görüntüsü")
 ####Kurulum CentOS 7.x 64bit işletim sistemi üzerinde gerçekleştirilmiştir. RHEL tabanlı işletim sistemlerinde aynı kurulumu kullanabilirsiniz. (Fedora, Redhat)
@@ -28,7 +28,7 @@ cat /etc/redhat-release
 ```
 Kurduğumuz sunucu CentOS 7.x işletim sistemidir.
 ```
-CentOS Linux release 7.1.1503 (Core)
+CentOS Linux release 7.2.1511 (Core)
 ```
 ```
 uname -m
@@ -51,7 +51,7 @@ Sırası ile Java, Maven, Tomcat ve Subversion'ı sunucumuza kuruyoruz.
 Tomcat dizinine geçiş yapıp sakai kurulum dosyalarını subversion ile sunucumuza indiriyoruz. İndirme işlemi bağlantı hızına göre uzun sürebilirmektedir.
 ```
 cd /opt/tomcat
-svn co https://source.sakaiproject.org/svn/sakai/tags/sakai-10.6/ sakai
+svn co https://source.sakaiproject.org/svn/sakai/tags/sakai-10.7/ sakai
 ```
 Ekran çıktısı aşağıdaki gibi olmalıdır.
 
