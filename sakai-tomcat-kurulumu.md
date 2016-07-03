@@ -5,7 +5,7 @@ Packages dizinize geçtikten sonra tomcat dosylarını wget ile sunucumuza indir
 ```
 cd /root/packages/
 ```
-İndirdiğimiz tomcat dosyasını tar komutu ile açıp daha sonra opt dizininin altına maven ismiyle taşıyoruz.
+İndirdiğimiz tomcat dosyasını tar komutu ile açıp daha sonra opt dizininin altına tomcat ismiyle taşıyoruz.
 ```
 wget http://archive.apache.org/dist/tomcat/tomcat-7/v7.0.69/bin/apache-tomcat-7.0.69.tar.gz
 tar xpfz apache-tomcat-7.0.69.tar.gz
