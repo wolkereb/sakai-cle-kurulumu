@@ -14,7 +14,7 @@ wget http://mirror.idealhosting.net.tr/Apache/maven/maven-3/3.3.9/binaries/apach
 tar xpfz apache-maven-3.3.9-bin.tar.gz
 mv apache-maven-3.3.9 /opt
 cd /opt
-ln -s apache-maven-3.3.9/ tomcat
+ln -s apache-maven-3.3.9/ maven
 ```
 Maven kurulumu için çevresel değişkenleri .bashrc dosyasını nano ile açıp içine export ifadelerini ekliyoruz. Bu sayede sunucu her başladığında maven çalışması için maven in bulunduğu dizin ve maven için memory ayarları tanımlanmış olacaktır.
 
