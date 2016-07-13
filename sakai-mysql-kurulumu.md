@@ -91,6 +91,7 @@ Tomcatin mysql ile haberleşmesi için gerekli mysql Connector ü /opt/tomcat/co
 ```
 cd /root/packages/
 wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.38.tar.gz
+tar xpfz mysql-connector-java-5.1.38.tar.gz 
 cd mysql-connector-java-5.1.38
 cp mysql-connector-java-5.1.38-bin.jar /opt/tomcat/common/lib/
 ```
