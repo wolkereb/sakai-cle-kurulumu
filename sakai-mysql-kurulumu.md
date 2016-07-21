@@ -90,10 +90,10 @@ systemctl restart mysqld
 Tomcatin mysql ile haberleşmesi için gerekli mysql Connector ü /opt/tomcat/common/lib/ dizini altına kopyalıyoruz.
 ```
 cd /root/packages/
-wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.38.tar.gz
-tar xpfz mysql-connector-java-5.1.38.tar.gz 
-cd mysql-connector-java-5.1.38
-cp mysql-connector-java-5.1.38-bin.jar /opt/tomcat/common/lib/
+wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.39.tar.gz
+tar xpfz mysql-connector-java-5.1.39.tar.gz
+cd mysql-connector-java-5.1.39
+cp mysql-connector-java-5.1.39-bin.jar /opt/tomcat/common/lib/
 ```
 
 sakai.properties dosyasına aşağıdaki ifadeleri ekleyip sakaiyi başlattığımızda sakai tüm sql dosyaları çalıştırarak tablolarını sakai veritabanına taşıyacaktır.

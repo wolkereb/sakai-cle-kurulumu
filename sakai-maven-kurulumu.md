@@ -23,7 +23,7 @@ nano /root/.bashrc
 
 export MAVEN_HOME=/opt/maven
 export PATH=$PATH:$MAVEN_HOME/bin
-export MAVEN_OPTS='-Xms512m -Xmx1024m -XX:PermSize=256m -XX:MaxPermSize=512m -Djava.util.Arrays.useLegacyMergeSort=true'
+export MAVEN_OPTS='-Xms512m -Xmx1024m -Djava.util.Arrays.useLegacyMergeSort=true'
 ```
 Sisteme restart atmak yerine source komutu ile .bashrc dosyasının içeriğini sisteme tanıtmış oluyoruz.
 ```
@@ -37,10 +37,9 @@ Maven ekran çıktısı aşağıdaki gibi olmalıdır.
 ```
 Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T16:41:47+00:00)
 Maven home: /opt/maven
-Java version: 1.7.0_79, vendor: Oracle Corporation
-Java home: /opt/jdk1.7.0_79/jre
+Java home: /opt/jdk1.8.0_91/jre
 Default locale: en_US, platform encoding: UTF-8
-OS name: "linux", version: "3.10.0-327.4.5.el7.x86_64", arch: "amd64", family: "unix"
+OS name: "linux", version: "3.10.0-327.22.2.el7.x86_64", arch: "amd64", family: "unix"
 ```
 
 Maven ayarları setting.xml dosyasının içinde bulunmaktadır. Projede kullanılacak repository dosyalarının nerede tutulacağına bu dosyada tanımlarız ve projede kullanılacak plugin respository vs bu dizine indirilecektir.
@@ -61,12 +60,12 @@ Maven ayarlarımızı setting.xml dosyasına ekliyoruz.
                       http://maven.apache.org/xsd/settings-1.0.0.xsd">
   <profiles>
     <profile>
-      <id>tomcat7</id>
+      <id>tomcat</id>
       <activation>
         <activeByDefault>true</activeByDefault>
       </activation>
       <properties>
-        <appserver.id>tomcat7</appserver.id>
+        <appserver.id>tomcat</appserver.id>
         <appserver.home>/opt/tomcat</appserver.home>
         <maven.tomcat.home>/opt/tomcat</maven.tomcat.home>
         <sakai.appserver.home>/opt/tomcat</sakai.appserver.home>

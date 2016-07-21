@@ -1,6 +1,7 @@
-# Sakai 10.7 CLE Kurulumu ve Yapılandırması
+# Sakai 11.x CLE Kurulumu ve Yapılandırması
+12.x için de aynı kurulum adımları geçerlidir. Git master sürümünde çalışmanız yeterlidir.
 
-![alt text](https://raw.githubusercontent.com/eemirtekin/sakai-tr/master/sakai-ekran-goruntusu.png "Sakai 10.x Ekran görüntüsü")
+![alt text](https://raw.githubusercontent.com/eemirtekin/sakai-tr/master/sakai-ekran-goruntusu.png "Sakai 11.x Ekran görüntüsü")
 ####Kurulum CentOS 7.x 64bit işletim sistemi üzerinde gerçekleştirilmiştir. RHEL tabanlı işletim sistemlerinde aynı kurulumu kullanabilirsiniz. (Fedora, Redhat)
 
 #####Sakai Hakkında:
@@ -12,7 +13,6 @@ Sakai İşbirliği ve Öğrenme Ortamı, ders yönetim sistemlerinin sahip oldu�
 Türkiyede Sakai'yi kullanan üniversiteler;
 * [Yaşar Üniversitesi] (http://e.yasar.edu.tr)
 * [Dokuz Eylül Üniversitesi] (http://oys.deu.edu.tr/portal)
-* [Gediz Üniversitesi] (http://oys.gediz.edu.tr/portal)
 * [İstanbul Kültür Üniversitesi] (http://cats.iku.edu.tr/portal)
 * [Sabacı Üniversitesi] (https://sucourse.sabanciuniv.edu/portal)
 * [Anadolu Üniversitesi] (http://sakai.anadolu.edu.tr)
@@ -46,23 +46,27 @@ Sırası ile Java, Maven, Tomcat ve Subversion'ı sunucumuza kuruyoruz.
 * [Java Kurulumu] (sakai-java-kurulumu.md)
 * [Maven Kurulumu] (sakai-maven-kurulumu.md)
 * [Tomcat Kurulumu] (sakai-tomcat-kurulumu.md)
-* [Subversion Kurulumu] (sakai-subversion-kurulumu.md)
 
 Tomcat dizinine geçiş yapıp sakai kurulum dosyalarını subversion ile sunucumuza indiriyoruz. İndirme işlemi bağlantı hızına göre uzun sürebilirmektedir.
 ```
 cd /opt/tomcat
-svn co https://source.sakaiproject.org/svn/sakai/tags/sakai-10.7/ sakai
+git clone https://github.com/sakaiproject/sakai.git
+cd sakai
+git tag -l
+git checkout 11.0-rc02
 ```
 Ekran çıktısı aşağıdaki gibi olmalıdır.
 
 ```
-A    sakai/web/web-impl/pack/src/webapp/WEB-INF
-A    sakai/web/web-impl/pack/src/webapp/WEB-INF/components.xml
-A    sakai/web/web-impl/pack/pom.xml
- U   sakai/web
-Checked out external at revision 320234.
-
-Checked out revision 320234.
+[root@sakai11 tomcat]# git clone https://github.com/sakaiproject/sakai.git
+Cloning into 'sakai'...
+remote: Counting objects: 718240, done.
+remote: Compressing objects: 100% (93/93), done.
+remote: Total 718240 (delta 21), reused 0 (delta 0), pack-reused 718138
+Receiving objects: 100% (718240/718240), 282.08 MiB | 26.85 MiB/s, done.
+Resolving deltas: 100% (313459/313459), done.
+Checking connectivity... done.
+Checking out files: 100% (22198/22198), done.
 ```
 Sakai'yi derlemeden önce master dizinine geçiş yapıp master'ı derliyoruz.
 ```
@@ -74,9 +78,9 @@ Ekran çıktısı aşağıdaki gibi olmalıdır.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 28.722 s
-[INFO] Finished at: 2015-07-22T14:26:09+03:00
-[INFO] Final Memory: 11M/491M
+[INFO] Total time: 7.481 s
+[INFO] Finished at: 2016-07-21T07:26:53+00:00
+[INFO] Final Memory: 14M/607M
 [INFO] ------------------------------------------------------------------------
 ```
 Şimdi ise Sakai ana dizine geçiş yaptıktan sonra tüm projeyi derliyoruz.
@@ -89,11 +93,15 @@ Ekran çıktısı aşağıdaki gibi olmalıdır.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 01:01 h
-[INFO] Finished at: 2015-07-22T15:29:02+03:00
-[INFO] Final Memory: 436M/899M
+[INFO] Total time: 06:00 min
+[INFO] Finished at: 2016-07-21T07:34:44+00:00
+[INFO] Final Memory: 615M/968M
 [INFO] ------------------------------------------------------------------------
 ```
+
+## Sakai MySql Ayarları
+* Sakai'de MySql kurulumu ve ayarları için [tıklanıyız] (sakai-mysql-kurulumu.md).
+
 Kurulum tamamlandı şimdi Sakai'yi başladabiliriz.
 ```
 /opt/tomcat/bin/startup.sh
@@ -103,7 +111,7 @@ Komut satırına üstteki ifadeyi yazdığınızda aşağaki gibi çıktı alman
 Using CATALINA_BASE:   /opt/tomcat
 Using CATALINA_HOME:   /opt/tomcat
 Using CATALINA_TMPDIR: /opt/tomcat/temp
-Using JRE_HOME:        /opt/jdk1.7.0_76/jre
+Using JRE_HOME:        /opt/jdk1.8.0_91/jre
 Using CLASSPATH:       /opt/tomcat/bin/bootstrap.jar:/opt/tomcat/bin/tomcat-juli.jar
 Tomcat started.
 ```
@@ -139,6 +147,3 @@ Kullanıcı Adı: admin
 
 ## Sakai Ldap Ayarları
 * Sakai Ldap ayarları için [tıklanıyız] (sakai-ldap-ayarlari.md).
-
-## Sakai MySql Ayarları
-* Sakai'de MySql kurulumu ve ayarları için [tıklanıyız] (sakai-mysql-kurulumu.md).
