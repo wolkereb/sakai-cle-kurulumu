@@ -1,7 +1,7 @@
 # Sakai 11.x CLE Kurulumu ve Yapılandırması
 12.x için de aynı kurulum adımları geçerlidir. Git master sürümünde çalışmanız yeterlidir.
 
-![alt text](https://raw.githubusercontent.com/eemirtekin/sakai-tr/master/sakai-ekran-goruntusu.png "Sakai 11.x Ekran görüntüsü")
+![alt text](https://raw.githubusercontent.com/eemirtekin/sakai-tr/master/sakai11-ekran-goruntusu.png "Sakai 11.x Ekran görüntüsü")
 ####Kurulum CentOS 7.x 64bit işletim sistemi üzerinde gerçekleştirilmiştir. RHEL tabanlı işletim sistemlerinde aynı kurulumu kullanabilirsiniz. (Fedora, Redhat)
 
 #####Sakai Hakkında:
