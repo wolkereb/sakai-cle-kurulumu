@@ -1,4 +1,4 @@
-## Tomcat 7 Kurulumu (CentOS, RHEL, yada Fedora)
+## Tomcat 8 Kurulumu (CentOS, RHEL, yada Fedora)
 
 Packages dizinize geçtikten sonra tomcat dosylarını wget ile sunucumuza indiriyoruz.
 
