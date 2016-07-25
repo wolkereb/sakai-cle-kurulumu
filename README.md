@@ -46,14 +46,13 @@ Sırası ile Java, Maven, Tomcat ve Subversion'ı sunucumuza kuruyoruz.
 * [Java Kurulumu] (sakai-java-kurulumu.md)
 * [Maven Kurulumu] (sakai-maven-kurulumu.md)
 * [Tomcat Kurulumu] (sakai-tomcat-kurulumu.md)
+* [Git Kurulumu] (git-kurulumu.md)
 
 Tomcat dizinine geçiş yapıp sakai kurulum dosyalarını subversion ile sunucumuza indiriyoruz. İndirme işlemi bağlantı hızına göre uzun sürebilirmektedir.
 ```
 cd /opt/tomcat
 git clone https://github.com/sakaiproject/sakai.git
-cd sakai
-git tag -l
-git checkout 11.0-rc02
+cd sakai && git checkout 11.0
 ```
 Ekran çıktısı aşağıdaki gibi olmalıdır.
 
