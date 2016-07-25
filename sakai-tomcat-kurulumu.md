@@ -83,4 +83,3 @@ Burda Sakai'nin önerdiği dizin yapısını oluşturuyoruz. Bu dizinlerin oluş
 mkdir -p shared/classes shared/lib common/classes common/lib server/classes server/lib
 ```
 
-Maven kurulumu tamanlandı. Bir sonraki aşama olan [Subversion Kurulumu] (sakai-subversion-kurulumu.md) kurulumuna geçebilirsiniz.
