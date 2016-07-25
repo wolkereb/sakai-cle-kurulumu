@@ -1,5 +1,6 @@
 ## Centos 7 Üzerine Git Kurulumu
 Git kurulumu için lütfen aşağıdaki adımları takip ediniz.
+```
 
 yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel
 yum install gcc perl-ExtUtils-MakeMaker
@@ -17,3 +18,4 @@ source /root/.bashrc
 git --version
 
 git version 2.9.2
+```
