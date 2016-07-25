@@ -30,7 +30,8 @@ nano setenv.sh
 ```
 Bu ayarlar sizin sunucu konfigürasyonuna göre değişiklik gösterecektir. Örneğin burada tomcat için max 1024 mb hafıza ayarlanmıştır, sakai 1024 mb'tan fazla hafıza kullanmak istediğinde out of memory(yetersiz hafıza) uyarısı verecektir.
 ```
-export JAVA_OPTS='-server -Xms512m -Xmx1024m -XX:PermSize=128m -XX:NewSize=192m -XX:MaxNewSize=384m -Djava.awt.headless=true -Dhttp.agent=Sakai -Dorg.apache.jasper.compiler.Parser.STRICT_QUOTE_ESCAPING=false -Dsun.lang.ClassLoader.allowArraySyntax=true -Djava.security.egd=file:/dev/./urandom'
+export JAVA_OPTS='-server -Xms512m -Xmx1024m -XX:PermSize=128m -XX:NewSize=192m -XX:MaxNewSize=384m -Djava.awt.headless=true -Dhttp.agent=Sakai -Dorg.apache.jasper.compiler.Parser.STRICT_QUOTE_ESCAPING=false -Dsun.lang.ClassLoader.allowArraySyntax=true -Djava.security.egd=file:/dev/./urandom -Duser.language=tr 
+-Duser.region=TR'
 ```
 Setenv.sh dosyasını çalıştırabilir hale getirip. Tomcat server'ın UTF8 desteğini ekliyoruz.
 ```
