@@ -7,14 +7,14 @@ Packages dizinize geçtikten sonra maven dosylarını wget ile sunucumuza indiri
 cd /root/packages
 ```
 ```
-wget http://mirror.idealhosting.net.tr/Apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
+wget https://www.apache.org/dist/maven/binaries/apache-maven-3.2.2-bin.tar.gz
 ```
 İndirdiğimiz maven dosyasını tar komutu ile açıp daha sonra opt dizininin altına maven ismiyle taşıyoruz.
 ```
-tar xpfz apache-maven-3.3.9-bin.tar.gz
-mv apache-maven-3.3.9 /opt
+tar xpfz apache-maven-3.2.2-bin.tar.gz
+mv apache-maven-3.2.2 /opt
 cd /opt
-ln -s apache-maven-3.3.9/ maven
+ln -s apache-maven-3.2.2/ maven
 ```
 Maven kurulumu için çevresel değişkenleri .bashrc dosyasını nano ile açıp içine export ifadelerini ekliyoruz. Bu sayede sunucu her başladığında maven çalışması için maven in bulunduğu dizin ve maven için memory ayarları tanımlanmış olacaktır.
 
@@ -35,7 +35,7 @@ mvn --version
 ```
 Maven ekran çıktısı aşağıdaki gibi olmalıdır.
 ```
-Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T16:41:47+00:00)
+Apache Maven 3.3.2 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T16:41:47+00:00)
 Maven home: /opt/maven
 Java home: /opt/jdk1.8.0_91/jre
 Default locale: en_US, platform encoding: UTF-8
