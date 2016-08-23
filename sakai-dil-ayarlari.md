@@ -5,7 +5,7 @@ Centos 7 üzerine pip kurulumu için aşağıdaki komutları kullanabilirsiniz.
 yum -y install python-pip
 pip -V
 ```
-Version sorguladığınızda aşağıdaki gibi ifade ile karşılaşıyorsanız pip pakat yöneticisini kurmuşsunuz demektedir.
+Version sorguladığınızda aşağıdaki gibi ifade ile karşılaşıyorsanız pip paket yöneticisini kurmuşsunuz demektedir.
 ```
 pip 7.1.0 from /usr/lib/python2.7/site-packages (python 2.7)
 ```
@@ -14,19 +14,25 @@ Kurulum için aşağıdaki komutu kullanabilirsiniz.
 ```
 sudo pip install transifex-client
 ```
-l10n klasörünü sakai'yi derlemeden önce veya sonra sakai dosyalarının bulunduğu dizine atmanız gerekmektedir.
-
-l10n klasöründeyken aşağıkidaki komutları çalıştırın.
-Ama öncesinde sakainin hangi versiyonun dil dosyalarını indireceksiniz bunu tmx.py dosyasından belirlemeniz gerekemektedir. Ben sakai10x için dil dosyalarını indirmiş olacağım.
+Dil dosyaları indirmek için aşağıdaki python scriptini indiriyoruz.
 ```
-#TMX Project Name on Transifex
-#project_name = 'sakai-trunk'
-project_name = 'sakai10x'
+cd /opt/tomcat/sakai
+git clone https://github.com/JaSakai/l10n
+cd l10n
 ```
 
-python tmx.py init
+Dana sonra tmx.py dosyası içinden aşağıda bulunan ifadeyi sakai versiyonu göre değiştiriniz.
 
+```
+project_name = os.getenv('TRANSIFEX_SAKAI_PROJECTNAME','sakai-trunk')
+```
+sonrası
+```
+project_name = os.getenv('TRANSIFEX_SAKAI_PROJECTNAME','sakai11x')
+```
 
+Transifex kullanıcı adı ve şifrenizi tanımlıyoruz.
+```
 nano ~/.transifexrc
 
 [https://www.transifex.com]
@@ -34,3 +40,11 @@ hostname = https://www.transifex.com
 username = user
 password = pass
 token =
+```
+l10n klasöründeyken aşağıkidaki komutları sırasıyla çalıştırın.
+```
+python tmx.py init
+python tmx.py download -u -l tr_TR
+```
+
+Sakai dil dosyaları indirildi şimdi sıra sakai yi derlemede.
