@@ -39,14 +39,13 @@ x86_64
 ```
 Şimdi kurulum esnasında gerekli olan paketleri kurmalıyız.
 ```
-yum install nano unzip wget -y
+yum install nano unzip wget git -y
 ```
 Sırası ile Java, Maven, Tomcat ve Subversion'ı sunucumuza kuruyoruz.
 
 * [Java Kurulumu] (sakai-java-kurulumu.md)
 * [Maven Kurulumu] (sakai-maven-kurulumu.md)
 * [Tomcat Kurulumu] (sakai-tomcat-kurulumu.md)
-* [Git Kurulumu] (git-kurulumu.md)
 
 Tomcat dizinine geçiş yapıp sakai kurulum dosyalarını subversion ile sunucumuza indiriyoruz. İndirme işlemi bağlantı hızına göre uzun sürebilirmektedir.
 ```
