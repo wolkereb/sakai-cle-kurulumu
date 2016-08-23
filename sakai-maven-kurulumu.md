@@ -50,7 +50,7 @@ mkdir -p /root/.m2/repository/
 ```
 Ve maven ayarlarını tanımlayacağımız ayar dosyanını oluşuruyoruz.
 ```
-nano /root/.m2/setting.xml
+nano /root/.m2/settings.xml
 ```
 Maven ayarlarımızı setting.xml dosyasına ekliyoruz.
 ```
@@ -74,6 +74,16 @@ Maven ayarlarımızı setting.xml dosyasına ekliyoruz.
       </properties>
     </profile>
   </profiles>
+
+   <mirrors>
+    <mirror>
+      <id>opencast-us</id>
+      <name>Opencast US</name>
+      <url>http://nexus.dcex.harvard.edu:8081/nexus/content/groups/public</url>
+      <mirrorOf>opencast</mirrorOf>
+    </mirror>
+   </mirrors>
+  
 </settings>
 ```
 
