@@ -53,6 +53,7 @@ cd /opt/tomcat
 git clone https://github.com/sakaiproject/sakai.git
 cd sakai && git checkout 11.0
 ```
+
 Ekran çıktısı aşağıdaki gibi olmalıdır.
 
 ```
@@ -66,6 +67,12 @@ Resolving deltas: 100% (313459/313459), done.
 Checking connectivity... done.
 Checking out files: 100% (22198/22198), done.
 ```
+## Sakai Dil Dosyalarını Güncelleme
+* Sakai dosyalarını indirdikten sonra dil dosyalarını güncellememiz iyi olacaktır.
+* Dil dosyalarını güncellemek istiyorsanız [tıklanıyız] (sakai-dil-ayarlari.md). İstemiyorsanız bir sonraki adıma geçebilirsiniz.
+
+##Sakai Derleme
+
 Sakai'yi derlemeden önce master dizinine geçiş yapıp master'ı derliyoruz.
 ```
 cd /opt/tomcat/sakai/master
