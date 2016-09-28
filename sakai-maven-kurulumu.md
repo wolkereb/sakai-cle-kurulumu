@@ -7,14 +7,14 @@ Packages dizinize geçtikten sonra maven dosylarını wget ile sunucumuza indiri
 cd /root/packages
 ```
 ```
-wget https://www.apache.org/dist/maven/binaries/apache-maven-3.2.2-bin.tar.gz
+wget https://archive.apache.org/dist/maven/maven-3/3.2.3/binaries/apache-maven-3.2.3-bin.tar.gz
 ```
 İndirdiğimiz maven dosyasını tar komutu ile açıp daha sonra opt dizininin altına maven ismiyle taşıyoruz.
 ```
-tar xpfz apache-maven-3.2.2-bin.tar.gz
-mv apache-maven-3.2.2 /opt
+tar xpfz apache-maven-3.2.3-bin.tar.gz
+mv apache-maven-3.2.3 /opt
 cd /opt
-ln -s apache-maven-3.2.2/ maven
+ln -s apache-maven-3.2.3/ maven
 ```
 Maven kurulumu için çevresel değişkenleri .bashrc dosyasını nano ile açıp içine export ifadelerini ekliyoruz. Bu sayede sunucu her başladığında maven çalışması için maven in bulunduğu dizin ve maven için memory ayarları tanımlanmış olacaktır.
 
