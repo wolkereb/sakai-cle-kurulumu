@@ -83,4 +83,17 @@ Burda Sakai'nin önerdiği dizin yapısını oluşturuyoruz. Bu dizinlerin oluş
 ```
 mkdir -p shared/classes shared/lib common/classes common/lib server/classes server/lib
 ```
+### Tomcat'in hızlı başlaması...
+
+```
+nano /opt/tomcat/conf/context.xml
+```
+Ekle
+```
+<Context>
+    <JarScanner>
+        <JarScanFilter defaultPluggabilityScan="false" />
+    </JarScanner>
+</Context>
+```
 
