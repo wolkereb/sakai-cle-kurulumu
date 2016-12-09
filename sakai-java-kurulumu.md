@@ -1,7 +1,7 @@
 ## Java Kurulumu (CentOS, RHEL, yada Fedora)
 Java kurulumunu kaynak koddan yağacağımız için aşağıdaki adımları sırasıyla takip ediniz. Kaynak koddan kurulumu tercih etmemin sebebi kurulum dosyalarına hakim olmaktır.
 
-Sakai 11.x Java 1.8 ile uyumlu çalışmaktadır. Bu yüzden Oracle JDK 1.8.0_91 sürümünü tercih ediyoruz. 1.8 sürümleri arasında uyumsuzluklar olabilmektedir bu yüzden Sakai CLE ana sitesindenki kurulum dökümanlarını incelemenizi tavsiye ederim. İlgili dökümana ulaşmak için [tıklayınız.](https://confluence.sakaiproject.org/pages/viewpage.action?pageId=106792022)
+Sakai 11.x Java 1.8 ile uyumlu çalışmaktadır. Bu yüzden Oracle JDK 1.8.0_101 sürümünü tercih ediyoruz. 1.8 sürümleri arasında uyumsuzluklar olabilmektedir bu yüzden Sakai CLE ana sitesindenki kurulum dökümanlarını incelemenizi tavsiye ederim. İlgili dökümana ulaşmak için [tıklayınız.](https://confluence.sakaiproject.org/pages/viewpage.action?pageId=106792022)
 Java'nın diğer versiyonları indirmek için [tıklayınız](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
 SSH ile sunucunuza bağlandıktan sonra aşağıdaki adımları sırası ile gerçekleştiriniz.
